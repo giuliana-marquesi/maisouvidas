@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 ### Este arquivo faz parte de uma série para automatizar o trabalho de enviar as musicas mais ouvidas da semana
 ## no formato de um grafico
