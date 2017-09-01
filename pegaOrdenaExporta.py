@@ -12,21 +12,21 @@ import codecs
 #urllib.parse.urlenconde()
 nome_doc = str(sys.argv[1]) + ".json"
 
-url = 'QUERY_URL'
+url = 'URL_QUERY'
 
 resposta = requests.get(url).json()
 
-def pegaNumeroId(item):
-    return item['id']
+#def pegaNumeroId(item):
+#    return item['id']
 
-ordena_id = sorted(resposta, key=pegaNumeroId)
+#ordena_id = sorted(resposta, key=pegaNumeroId)
 
 with codecs.open( nome_doc, 'w', 'latin1') as f:
-    json.dump(ordena_id, f)
+    json.dump(resposta, f)
 
 for audio in range(0, 10):
-    titulo = ordena_id[audio]['title']
-    numeroViews = str(ordena_id[audio]['playback_count'])
-    numeroDownloads = str(ordena_id[audio]['download_count'])
+    titulo = resposta[audio]['title']
+    numeroViews = str(resposta[audio]['playback_count'])
+    numeroDownloads = str(resposta[audio]['download_count'])
 
     print(titulo + ' ' + numeroViews + ' ' + numeroDownloads)
