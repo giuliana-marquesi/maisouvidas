@@ -21,7 +21,7 @@ resposta = requests.get(url).json()
 
 #ordena_id = sorted(resposta, key=pegaNumeroId)
 
-with codecs.open( nome_doc, 'w', 'latin1') as f:
+with codecs.open( "antigo.json", 'w', 'latin1') as f:
     json.dump(resposta, f)
 
 for audio in range(0, 10):
